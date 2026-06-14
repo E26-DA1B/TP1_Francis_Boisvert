@@ -13,7 +13,7 @@
     "Année": 1949,
     "Pages": 328,
     "Genre": "Dystopie",
-    "Statut": "Emprunté"
+    "Statut": "Emprunte"
   },
   {
     "Titre": "L'Étranger",
@@ -37,7 +37,7 @@
     "Année": 1954,
     "Pages": 423,
     "Genre": "Fantasy",
-    "Statut": "Emprunté"
+    "Statut": "Emprunte"
   },
   {
     "Titre": "Fahrenheit 451",
@@ -61,7 +61,7 @@
     "Année": 1862,
     "Pages": 1488,
     "Genre": "Roman",
-    "Statut": "Emprunté"
+    "Statut": "Emprunte"
   },
   {
     "Titre": "Dune",
@@ -85,7 +85,7 @@
     "Année": 2004,
     "Pages": 730,
     "Genre": "Science-fiction",
-    "Statut": "Emprunté"
+    "Statut": "Emprunte"
   },
   {
     "Titre": "Orgueil et Préjugés",
@@ -109,7 +109,7 @@
     "Année": 1977,
     "Pages": 447,
     "Genre": "Horreur",
-    "Statut": "Emprunté"
+    "Statut": "Emprunte"
   },
   {
     "Titre": "La Peste",
@@ -133,7 +133,7 @@
     "Année": 1988,
     "Pages": 338,
     "Genre": "Thriller",
-    "Statut": "Emprunté"
+    "Statut": "Emprunte"
   },
   {
     "Titre": "La Route",
@@ -157,6 +157,6 @@
     "Année": 1962,
     "Pages": 274,
     "Genre": "Uchronie",
-    "Statut": "Emprunté"
+    "Statut": "Emprunte"
   }
 ]
