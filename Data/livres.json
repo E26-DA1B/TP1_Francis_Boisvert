@@ -1,0 +1,162 @@
+[
+  {
+    "Titre": "Le Petit Prince",
+    "Auteur": "Antoine de Saint-Exupéry",
+    "Année": 1943,
+    "Pages": 96,
+    "Genre": "Roman",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "1984",
+    "Auteur": "George Orwell",
+    "Année": 1949,
+    "Pages": 328,
+    "Genre": "Dystopie",
+    "Statut": "Emprunté"
+  },
+  {
+    "Titre": "L'Étranger",
+    "Auteur": "Albert Camus",
+    "Année": 1942,
+    "Pages": 185,
+    "Genre": "Roman",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Harry Potter à l'école des sorciers",
+    "Auteur": "J.K. Rowling",
+    "Année": 1997,
+    "Pages": 309,
+    "Genre": "Fantasy",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Le Seigneur des Anneaux : La Communauté de l'Anneau",
+    "Auteur": "J.R.R. Tolkien",
+    "Année": 1954,
+    "Pages": 423,
+    "Genre": "Fantasy",
+    "Statut": "Emprunté"
+  },
+  {
+    "Titre": "Fahrenheit 451",
+    "Auteur": "Ray Bradbury",
+    "Année": 1953,
+    "Pages": 249,
+    "Genre": "Science-fiction",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Le Nom de la Rose",
+    "Auteur": "Umberto Eco",
+    "Année": 1980,
+    "Pages": 552,
+    "Genre": "Roman historique",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Les Misérables",
+    "Auteur": "Victor Hugo",
+    "Année": 1862,
+    "Pages": 1488,
+    "Genre": "Roman",
+    "Statut": "Emprunté"
+  },
+  {
+    "Titre": "Dune",
+    "Auteur": "Frank Herbert",
+    "Année": 1965,
+    "Pages": 604,
+    "Genre": "Science-fiction",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Le Vieil Homme et la Mer",
+    "Auteur": "Ernest Hemingway",
+    "Année": 1952,
+    "Pages": 127,
+    "Genre": "Roman",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "La Horde du Contrevent",
+    "Auteur": "Alain Damasio",
+    "Année": 2004,
+    "Pages": 730,
+    "Genre": "Science-fiction",
+    "Statut": "Emprunté"
+  },
+  {
+    "Titre": "Orgueil et Préjugés",
+    "Auteur": "Jane Austen",
+    "Année": 1813,
+    "Pages": 279,
+    "Genre": "Roman",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Le Parfum",
+    "Auteur": "Patrick Süskind",
+    "Année": 1985,
+    "Pages": 255,
+    "Genre": "Roman",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Shining",
+    "Auteur": "Stephen King",
+    "Année": 1977,
+    "Pages": 447,
+    "Genre": "Horreur",
+    "Statut": "Emprunté"
+  },
+  {
+    "Titre": "La Peste",
+    "Auteur": "Albert Camus",
+    "Année": 1947,
+    "Pages": 372,
+    "Genre": "Roman",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Neuromancien",
+    "Auteur": "William Gibson",
+    "Année": 1984,
+    "Pages": 271,
+    "Genre": "Cyberpunk",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Le Silence des Agneaux",
+    "Auteur": "Thomas Harris",
+    "Année": 1988,
+    "Pages": 338,
+    "Genre": "Thriller",
+    "Statut": "Emprunté"
+  },
+  {
+    "Titre": "La Route",
+    "Auteur": "Cormac McCarthy",
+    "Année": 2006,
+    "Pages": 241,
+    "Genre": "Post-apocalyptique",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Le Cycle de Fondation",
+    "Auteur": "Isaac Asimov",
+    "Année": 1951,
+    "Pages": 255,
+    "Genre": "Science-fiction",
+    "Statut": "Disponible"
+  },
+  {
+    "Titre": "Le Maître du Haut Château",
+    "Auteur": "Philip K. Dick",
+    "Année": 1962,
+    "Pages": 274,
+    "Genre": "Uchronie",
+    "Statut": "Emprunté"
+  }
+]
