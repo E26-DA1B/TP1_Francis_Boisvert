@@ -1,5 +1,6 @@
-use crate::livres::{LivreTemp, Statut};
-use crate::creation_modification::champ::Champ;
+use crate::livres::livre_temp::LivreTemp;
+use crate::livres::statut::Statut;
+use crate::livres::champ::Champ;
 
 
 pub fn modifier_champ(livre: &mut LivreTemp, (champ, valeur): (Champ , String)){

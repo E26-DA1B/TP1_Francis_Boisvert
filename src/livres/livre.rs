@@ -1,16 +1,8 @@
-// use std::default;
-
 use serde::Deserialize;
+use crate::livres::statut::Statut;
 
-#[derive(Debug, Deserialize, Default, Clone, Copy)]
-#[serde(rename_all = "PascalCase")]
-pub enum Statut {
-    #[default]
-    Disponible,
-    Emprunte,
-}
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Clone)]
 #[allow(dead_code)]
 #[serde(rename_all = "PascalCase")]
 pub struct Livre {
@@ -24,16 +16,16 @@ pub struct Livre {
 }
 
 
-#[allow(dead_code)]
-#[derive(Default)]
-pub struct LivreTemp {
-    pub titre: Option<String>,
-    pub auteur: Option<String>,
-    pub annee: Option<i32>,
-    pub pages: Option<i32>,
-    pub genre: Option<String>,
-    pub statut: Statut,
-}
+// #[allow(dead_code)]
+// #[derive(Default)]
+// pub struct LivreTemp {
+//     pub titre: Option<String>,
+//     pub auteur: Option<String>,
+//     pub annee: Option<i32>,
+//     pub pages: Option<i32>,
+//     pub genre: Option<String>,
+//     pub statut: Statut,
+// }
 
 pub trait AfficherStatut {
     fn afficher(&self) -> &str;
@@ -63,12 +55,3 @@ impl AfficherStatut for Statut {
 //     }
 // }
 
-impl LivreTemp {
-    pub fn est_complet(&self) -> bool {
-        self.titre.is_some()
-        && self.auteur.is_some()
-        && self.annee.is_some()
-        && self.pages.is_some()
-        && self.genre.is_some()
-    }
-}

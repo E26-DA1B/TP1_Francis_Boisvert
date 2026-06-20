@@ -1,18 +1,19 @@
 use std::io::{stdin, stdout, Write};
 
 use crate::affichage::affichage_mod_livre::affichage_mod_livre;
-use crate::affichage::affichage::{afficher_message_jaune, afficher_message_vert};
+use crate::affichage::affichage_couleurs::{afficher_message_jaune, afficher_message_vert};
 
 
-use crate::bibliotheque::Bibliotheque;
+use crate::livres::bibliotheque::Bibliotheque;
 use crate::creation_modification::modifier_champ::modifier_champ;
-use crate::creation_modification::champ::Champ;
+use crate::livres::champ::Champ;
 use crate::creation_modification::demander_valeur_champ::demander_valeur_champ;
 use crate::creation_modification::conversion_livre_complet::conversion_livre_complet;
 use crate::creation_modification::sauvegarder_livre::sauvegarder_livre; 
 
 
-use crate::livres::{Livre, LivreTemp};
+use crate::livres::livre::Livre;
+use crate::livres::livre_temp::LivreTemp;
 
 // use crate ::bibliotheque::Bibliotheque;
 

@@ -1,5 +1,8 @@
-use crate::livres::{LivreTemp, AfficherStatut};
-use crate::affichage::affichage_option::{affichage_option};
+
+
+use crate::livres::livre::AfficherStatut;
+use crate::livres::livre_temp::LivreTemp;
+use crate::affichage::affichage_mod_champs::{affichage_option};
 
 
 pub fn affichage_mod_livre(livre: &LivreTemp){

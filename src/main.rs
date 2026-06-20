@@ -1,8 +1,8 @@
 mod creation_modification;
 mod utils;
 mod livres;
-mod bibliotheque;
 mod affichage;
+mod recherche;
 
 
 // use menu::creation_livre;
@@ -13,12 +13,13 @@ mod affichage;
 use utils::validation;
 use validation::valider_choix;
 
-use creation_modification::creation_modification_livre::creation_livre;
+use creation_modification::menu_creation_modification_livre::creation_livre;
 
-use affichage::affichage::{afficher_menu_principal, afficher_tableau};
+use affichage::affichage_menu_principal::afficher_menu_principal;
+use affichage::affichage_tableau::afficher_tableau;
 
 
-use crate::bibliotheque::Bibliotheque;
+use crate::livres::bibliotheque::Bibliotheque;
 
 
 fn main() {

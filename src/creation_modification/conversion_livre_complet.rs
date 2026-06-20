@@ -1,4 +1,6 @@
-use crate::livres::{Livre, LivreTemp};
+use crate::livres::livre::Livre;
+use crate::livres::livre_temp::LivreTemp;
+
 
 pub fn conversion_livre_complet(livre: &LivreTemp) -> Result<Livre, String> {
     if !livre.est_complet() {
