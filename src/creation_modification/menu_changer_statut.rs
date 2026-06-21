@@ -13,7 +13,7 @@ use crate::creation_modification::changer_statut_livre::changer_statut_livre;
 
 
 pub fn menu_changer_statut(bibliotheque: &mut Bibliotheque) {
-    loop {
+
         affichage_menu_changer_statut();
         let recherche = input_valeur("Titre (Vide pour afficher toute la liste) > ");
 
@@ -21,7 +21,7 @@ pub fn menu_changer_statut(bibliotheque: &mut Bibliotheque) {
             Some(l) =>l,
             None => {
                 println!("Aucun livre trouvé\n");
-                break
+                return;
             },
         };
 
@@ -30,7 +30,7 @@ pub fn menu_changer_statut(bibliotheque: &mut Bibliotheque) {
             Some(i) => i,
             None => {
                 afficher_message_jaune("Livre non trouvé dans la bibliotheque\n");
-                break;
+                return;
             }
         };
 
@@ -43,15 +43,15 @@ pub fn menu_changer_statut(bibliotheque: &mut Bibliotheque) {
             "o" => {
                 changer_statut_livre(livre);
                 afficher_message_jaune("Changement de statut");
-                afficher_tableau(&[livre.clone()], "Livre a changer le statut");
-                break;
+                afficher_tableau(std::slice::from_ref(livre), "Livre a changer le statut");
+
             },
             _ => {
                 afficher_message_jaune("Operation annulée");
-                afficher_tableau(&[livre.clone()], "Operation annulée");
-                break;
+                afficher_tableau(std::slice::from_ref(livre), "Operation annulée");
+
             },
         
-        }
+        
     }
 }

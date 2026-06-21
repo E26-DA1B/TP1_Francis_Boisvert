@@ -20,28 +20,28 @@ pub fn rechercher(bibliotheque: &Bibliotheque) {
         match choix_utilisateur {
             Some(1) => {
                 let recherche = input_valeur("Entrez le titre a rechercher: ");
-                let resultat = recherche_par_champ(&bibliotheque, Champ::Titre, &recherche);
+                let resultat = recherche_par_champ(bibliotheque, Champ::Titre, &recherche);
                 afficher_tableau(&resultat, &format!("\nResultats trouvés avec titre: \"{}\"", &recherche));
             },
 
             Some(2) => {
                 let recherche = input_valeur("Entrez l'auteur a rechercher: ");
-                let resultat = recherche_par_champ(&bibliotheque, Champ::Auteur, &recherche);
+                let resultat = recherche_par_champ(bibliotheque, Champ::Auteur, &recherche);
                 afficher_tableau(&resultat, &format!("Resultats trouvés avec auteur \"{}\"", &recherche));
             },
             Some(3) => {
                 let recherche = input_valeur("Entrez le genre a rechercher: ");
-                let resultat = recherche_par_champ(&bibliotheque, Champ::Genre, &recherche);
+                let resultat = recherche_par_champ(bibliotheque, Champ::Genre, &recherche);
                 afficher_tableau(&resultat, &format!("Resultats trouvés avec genre \"{}\"", &recherche));
             },
 
             Some(4) => {
                 let resultat = bibliotheque.livres.iter().filter(|l| l.statut == Statut::Disponible).cloned().collect::<Vec<Livre>>();
-                afficher_tableau(&resultat, &"Lire disponible:");
+                afficher_tableau(&resultat, "Lire disponible:");
             },
             Some(5) => {
                 let resultat = bibliotheque.livres.iter().filter(|l| l.statut == Statut::Emprunte).cloned().collect::<Vec<Livre>>();
-                afficher_tableau(&resultat, &"Livres emprunté:");
+                afficher_tableau(&resultat, "Livres emprunté:");
             },
             Some(6) => {
                 break
