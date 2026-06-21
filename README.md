@@ -22,14 +22,17 @@ Un systeme de gestion de bibliotheque en mode console developpe en Rust. Le prog
 
 Le projet est entierement modularise pour separer la logique metier de l'affichage :
 
-src/
-├── main.rs                  # Point d'entree de l'application
-├── affichage/               # Menus, tableaux textuels et codes couleurs ANSI
-├── creation_modification/   # Logique d'edition, conversion de types et sauvegarde
-├── livres/                  # Modeles de données (Livre, LivreTemp, Bibliotheque, Enums)
-├── recherche/               # Algorithmes de recherche et selection unique
-├── statistiques/            # Modules de calcul des metriques du catalogue
-└── utils/                   # Capture des entrees et validation des choix du menu
+
+
+src/  
+|-- main.rs  
+|-- affichage/  
+|-- creation_modification/  
+|-- livres/  
+|-- recherche/  
+|-- statistiques/  
+`-- utils/  
+
 
 ---
 
