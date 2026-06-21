@@ -1,28 +1,25 @@
 use std::io::{stdin, stdout, Write};
 
-use crate::affichage::affichage_mod_livre::affichage_mod_livre;
-use crate::affichage::affichage_couleurs::{afficher_message_jaune, afficher_message_vert};
+use crate::affichage::affichage_menu_mod_livre::affichage_mod_livre;
+use crate::affichage::affichage_couleurs_messages::{afficher_message_jaune, afficher_message_vert};
 
 
+use crate::creation_modification::conversion_en_livre_temp::conversion_en_livre_temp;
 use crate::livres::bibliotheque::Bibliotheque;
 use crate::creation_modification::modifier_champ::modifier_champ;
 use crate::livres::champ::Champ;
-use crate::creation_modification::demander_valeur_champ::demander_valeur_champ;
-use crate::creation_modification::conversion_livre_complet::conversion_livre_complet;
+use crate::utils::input_valeur::input_valeur;
+use crate::creation_modification::conversion_en_livre_complet::conversion_livre_complet;
 use crate::creation_modification::sauvegarder_livre::sauvegarder_livre; 
 
 
 use crate::livres::livre::Livre;
-use crate::livres::livre_temp::LivreTemp;
+// use crate::livres::livre_temp::LivreTemp;
 
 // use crate ::bibliotheque::Bibliotheque;
 
 pub fn creation_livre(livre:Option<Livre>,  bibliotheque: &mut Bibliotheque){
-    let mut livre_temp = match livre {
-        
-        Some(l) => LivreTemp {titre: Some(l.titre.clone()), auteur: Some(l.auteur.clone()), annee: Some(l.annee), pages: Some(l.pages), genre: Some(l.genre.clone()), statut: l.statut},
-        None => LivreTemp::default(),
-    };
+    let mut livre_temp = conversion_en_livre_temp(livre);
 
     loop {
         affichage_mod_livre(&livre_temp);
@@ -34,15 +31,15 @@ pub fn creation_livre(livre:Option<Livre>,  bibliotheque: &mut Bibliotheque){
         
         match choix.to_lowercase().trim() {
             "1" => {
-                let valeur = demander_valeur_champ("Entrez le nouveau Titre: ");
+                let valeur = input_valeur("Entrez le nouveau Titre: ");
                 modifier_champ(&mut livre_temp, (Champ::Titre, valeur));
             }
             "2" => {
-                let valeur = demander_valeur_champ("Entrez le nouvel Auteur: ");
+                let valeur = input_valeur("Entrez le nouvel Auteur: ");
                 modifier_champ(&mut livre_temp, (Champ::Auteur, valeur));
             }
             "3" => {
-                let valeur = demander_valeur_champ("Entrez la nouvelle Année: ");
+                let valeur = input_valeur("Entrez la nouvelle Année: ");
                 match valeur.parse::<i32>() {
                     Ok(_) => modifier_champ(&mut livre_temp, (Champ::Annee, valeur)),
                     Err(_) => afficher_message_jaune("\nVeillez entrer un nombre"),
@@ -50,7 +47,7 @@ pub fn creation_livre(livre:Option<Livre>,  bibliotheque: &mut Bibliotheque){
                 
             }
             "4" => {
-                let valeur = demander_valeur_champ("Entrez le nouveau nombre de pages: ");
+                let valeur = input_valeur("Entrez le nouveau nombre de pages: ");
                 match valeur.parse::<i32>() {
                     Ok(_) => modifier_champ(&mut livre_temp, (Champ::Pages, valeur)),
                     Err(_) => afficher_message_jaune("\nVeillez entrer un nombre"),
@@ -58,7 +55,7 @@ pub fn creation_livre(livre:Option<Livre>,  bibliotheque: &mut Bibliotheque){
                 
             }
             "5" => {
-                let valeur = demander_valeur_champ("Entrez le(s) nouveau genre(s): ");
+                let valeur = input_valeur("Entrez le(s) nouveau genre(s): ");
                 modifier_champ(&mut livre_temp, (Champ::Genre, valeur));
             }
             "s" => {

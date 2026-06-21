@@ -1,6 +1,6 @@
 use std::io::{stdin, stdout, Write};
 
-pub fn demander_valeur_champ(prompt:&str) ->String {
+pub fn input_valeur(prompt:&str) ->String {
     let mut valeur = String::new();
     print!("{prompt}");
     stdout().flush().unwrap();

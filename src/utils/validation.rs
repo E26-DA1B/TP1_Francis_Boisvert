@@ -1,4 +1,4 @@
-use crate::affichage::affichage_couleurs::afficher_message_jaune;
+use crate::affichage::affichage_couleurs_messages::afficher_message_jaune;
 
 use std::io::{stdin, stdout, Write};
 

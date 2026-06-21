@@ -3,7 +3,7 @@ use crate::livres::livre::Livre;
 use crate::livres::champ::Champ;
 // use crate::recherche;
 
-pub fn recherche_par_champ(bibliotheque: &Bibliotheque, champ: Champ, recherche: String) -> Vec<Livre> {
+pub fn recherche_par_champ(bibliotheque: &Bibliotheque, champ: Champ, recherche: &str) -> Vec<Livre> {
     let mut resultats: Vec<Livre> = Vec::new();
     let recherche = recherche.to_lowercase();
     for livre in &bibliotheque.livres {
@@ -15,7 +15,7 @@ pub fn recherche_par_champ(bibliotheque: &Bibliotheque, champ: Champ, recherche:
         };
         
         if trouve {
-            resultats.push(livre.clone())
+            resultats.push(livre.clone());
         }
     }
 

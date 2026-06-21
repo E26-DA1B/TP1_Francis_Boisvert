@@ -2,7 +2,7 @@ use serde::Deserialize;
 use crate::livres::statut::Statut;
 
 
-#[derive(Deserialize, Clone)]
+#[derive(Deserialize, Clone, Default, PartialEq)]
 #[allow(dead_code)]
 #[serde(rename_all = "PascalCase")]
 pub struct Livre {
@@ -15,17 +15,6 @@ pub struct Livre {
     pub statut: Statut,
 }
 
-
-// #[allow(dead_code)]
-// #[derive(Default)]
-// pub struct LivreTemp {
-//     pub titre: Option<String>,
-//     pub auteur: Option<String>,
-//     pub annee: Option<i32>,
-//     pub pages: Option<i32>,
-//     pub genre: Option<String>,
-//     pub statut: Statut,
-// }
 
 pub trait AfficherStatut {
     fn afficher(&self) -> &str;
