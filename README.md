@@ -72,4 +72,4 @@ cargo clippy
 
 ## Auteur
 
-Projet réalisé par Francis [Nom de famille], dans le cadre du TP1 — Rust fondamental.
+Projet réalisé par Francis Boisvert, dans le cadre du TP1 — Rust fondamental.
