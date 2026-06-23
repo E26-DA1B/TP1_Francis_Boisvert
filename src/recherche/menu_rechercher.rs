@@ -4,7 +4,7 @@ use crate::affichage::affichage_tableau::afficher_tableau;
 // use crate::livres::livre::Livre;
 use crate::livres::enum_champ::Champ;
 use crate::livres::bibliotheque::Bibliotheque;
-use crate::livres::statut::Statut;
+use crate::livres::enum_statut::Statut;
 use crate::livres::livre::Livre;
 
 use crate::recherche::rechercher_par_champ::recherche_par_champ;
