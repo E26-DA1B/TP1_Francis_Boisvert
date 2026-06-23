@@ -3,13 +3,13 @@ use crate::affichage::affichage_tableau::afficher_tableau;
 use crate::affichage::affichage_menu_changer_statut::affichage_menu_changer_statut;
 
 use crate::livres::bibliotheque::Bibliotheque;
-use crate::livres::livre::{Affichable, AfficherStatut};
+use crate::livres::livre::Affichable;
 
-// use crate::livres::statut::Statut;
+
 use crate::recherche::trouver_livre_unique::trouver_livre_unique;
 
 use crate::utils::input_valeur::input_valeur;
-use crate::creation_modification::changer_statut_livre::changer_statut_livre;
+
 
 
 pub fn menu_changer_statut(bibliotheque: &mut Bibliotheque) {
@@ -41,7 +41,8 @@ pub fn menu_changer_statut(bibliotheque: &mut Bibliotheque) {
         let confirmation = input_valeur(format!("Entrez (o/O) changer le statut pour {}> ", livre.statut.afficher_inverse()));
         match confirmation.to_lowercase().trim() {
             "o" => {
-                changer_statut_livre(livre);
+                // changer_statut_livre(livre);
+                livre.changer_statut();
                 afficher_message_jaune("Changement de statut");
                 afficher_tableau(std::slice::from_ref(livre), "Livre a changer le statut");
 

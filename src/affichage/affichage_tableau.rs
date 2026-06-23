@@ -1,4 +1,4 @@
-use crate::livres::livre::{AfficherStatut, Livre};
+use crate::livres::livre::{Livre};
 
 
 pub fn afficher_tableau(livres: &[Livre], titre: &str) {

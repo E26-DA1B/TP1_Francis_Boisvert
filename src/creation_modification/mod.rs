@@ -4,4 +4,3 @@ pub mod conversion_en_livre_complet;
 pub mod conversion_en_livre_temp;
 pub mod sauvegarder_livre;
 pub mod menu_changer_statut;
-pub mod changer_statut_livre;

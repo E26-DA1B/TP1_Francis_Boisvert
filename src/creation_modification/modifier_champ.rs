@@ -1,5 +1,4 @@
 use crate::livres::livre_temp::LivreTemp;
-use crate::livres::statut::Statut;
 use crate::livres::champ::Champ;
 
 
@@ -10,11 +9,5 @@ pub fn modifier_champ(livre: &mut LivreTemp, (champ, valeur): (Champ , String)){
         Champ::Annee => livre.annee = valeur.parse().ok(),
         Champ::Pages => livre.pages = valeur.parse().ok(),
         Champ::Genre => livre.genre = Some(valeur),
-        Champ::Statut => {
-            livre.statut = match livre.statut {
-                Statut::Disponible => Statut::Emprunte,
-                Statut::Emprunte => Statut::Disponible,
-            }
-        }
     }
 }

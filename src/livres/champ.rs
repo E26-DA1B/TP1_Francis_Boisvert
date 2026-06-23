@@ -4,5 +4,4 @@ pub enum Champ {
     Annee,
     Pages,
     Genre,
-    Statut,
 }
