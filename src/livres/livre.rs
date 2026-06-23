@@ -19,24 +19,6 @@ pub trait Affichable {
     fn afficher(&self);
 }
 
-
-
-impl  Statut {
-    pub fn afficher(&self) -> &str {
-        match self {
-            Statut::Disponible => "\x1b[92mDisponible\x1b[0m",
-            Statut::Emprunte => "\x1b[91mEmprunté\x1b[0m",
-        }
-    }
-
-    pub fn afficher_inverse(&self) -> &str {
-        match self {
-            Statut::Emprunte => "\x1b[92mDisponible\x1b[0m",
-            Statut::Disponible => "\x1b[91mEmprunté\x1b[0m",
-        }
-    }
-}
-
 impl Livre {
     pub fn changer_statut(&mut self) {
     self.statut = match self.statut {
