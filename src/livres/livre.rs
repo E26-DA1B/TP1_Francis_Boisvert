@@ -9,8 +9,8 @@ pub struct Livre {
     pub titre: String,
     pub auteur: String,
     #[serde(rename = "Année")]
-    pub annee: i32,
-    pub pages: i32,
+    pub annee: u32,
+    pub pages: u32,
     pub genre: String,
     pub statut: Statut,
 }

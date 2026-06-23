@@ -1,6 +1,6 @@
 
 
-pub fn affichage_statistiques((total_livres, total_pages, moyenne_pages, nombre_disponible, nombre_emprunte):(i32, i32, f64, i32, i32)) {
+pub fn affichage_statistiques((total_livres, total_pages, moyenne_pages, nombre_disponible, nombre_emprunte):(u32, u32, f64, u32, u32)) {
 
 
     println!();

@@ -17,7 +17,7 @@ pub fn trouver_livre_unique(bibliotheque: &Bibliotheque, titre: &str) -> Option<
         1 => Some(resultats[0].clone()),
         _ => {
             afficher_tableau(&resultats, "Livres trouvés");
-            let choix = match valider_choix(resultats.len() as i32) {
+            let choix = match valider_choix(resultats.len() as u32) {
                 Some(c) => c-1,   
                 None => return None,
             };

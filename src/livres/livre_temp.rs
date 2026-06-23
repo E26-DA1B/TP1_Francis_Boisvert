@@ -6,8 +6,8 @@ use crate::livres::enum_statut::Statut;
 pub struct LivreTemp {
     pub titre: Option<String>,
     pub auteur: Option<String>,
-    pub annee: Option<i32>,
-    pub pages: Option<i32>,
+    pub annee: Option<u32>,
+    pub pages: Option<u32>,
     pub genre: Option<String>,
     pub statut: Statut,
 }
